@@ -32,6 +32,7 @@ class TestValEpisode(BasicEpisode):
             self._env.reset(scene)
 
         self.environment.controller.state = episode["state"]
+        self.environment.controller.last_event.frame = self.environment.controller.get_image()
 
         self.task_data = episode["task_data"]
         self.target_object = episode["goal_object_type"]

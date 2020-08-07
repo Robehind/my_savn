@@ -90,6 +90,8 @@ def savn_val(
         reward_dict = {}
         episode_num = 0
         num_gradients = 0
+        #print(player.s)
+        #return
 
         while True:
             total_reward = run_episode(player, args, total_reward, model_options, False)

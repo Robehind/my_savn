@@ -25,6 +25,8 @@ os.environ["OMP_NUM_THREADS"] = "1"
 def main():
     args = flag_parser.parse_arguments()
 
+    #args.load_model = '../EXPS/savn_000000_000000/SAVN_100_000000.dat'
+
 
     if args.model == "BaseModel" or args.model == "GCN":
         args.learned_loss = False
