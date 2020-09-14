@@ -45,6 +45,7 @@ def main_eval(args, create_shared_model, init_agent):
         target = savn_val
 
     rank = 0
+    args.scene_types = ['living_room']
     for scene_type in args.scene_types:
         p = mp.Process(
             target=target,

@@ -36,8 +36,8 @@ def savn_val(
     glove = Glove(args.glove_file)
     scenes, possible_targets, targets = get_data(args.scene_types, args.val_scenes)
     num = name_to_num(scene_type)
-    scenes = scenes[num]
-    targets = targets[num]
+    scenes = scenes[0]
+    targets = targets[0]
 
     if scene_type == "living_room":
         args.max_episode_length = 200
@@ -98,8 +98,8 @@ def savn_val(
 
             if player.done:
                 break
-
-            if args.gradient_limit < 0 or episode_num < args.gradient_limit:
+            if False:
+            #if args.gradient_limit < 0 or episode_num < args.gradient_limit:
 
                 num_gradients += 1
 
